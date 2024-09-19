@@ -1,6 +1,6 @@
 // PWD verifier:
 
-String pwd = "12345678as";
+String pwd = "12345678as ";
 
 void setup() {
   // put your setup code here, to run once:
@@ -30,6 +30,9 @@ void setup() {
     }
     if (isDigit(letter) == 1) {
       isPwdDigit = 1;
+    }
+    if (isSpace(letter) == 1) { //
+      isPwdSpace = 1;
     } 
   }
   Serial.print("Longitud: ");
@@ -38,6 +41,14 @@ void setup() {
   Serial.println(isPwdAlpha);
   Serial.print("Dígito: ");
   Serial.println(isPwdDigit);
+  Serial.print("Espacios: ");
+  Serial.println(isPwdSpace);
+  if (isPwdLength8 == 1 && isPwdAlpha == 1 && isPwdDigit == 1 && isPwdSpace == 0) {
+    Serial.println("La contraseña es correcta.");
+  } else {
+    Serial.println("La contraseña NO es correcta.");
+
+  }
   Serial.println("Fin.");
 
 }
