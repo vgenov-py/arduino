@@ -11,7 +11,7 @@ Adafruit_BMP280 bmp;
 float base_altitude, prev_altitude, altitude;
 int base_tone = 500;
 float oscilation = 0.5;
-float altitudes[10];
+float altitudes[size];
 
 void setup() {
   pinMode(buzzer, OUTPUT);

@@ -1,15 +1,12 @@
-int nums[4] = {1,2,3,4}; // -> []
-int result = 0;
+int nums[4] = {5, 6, 7, 8};
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  for (int i = 0; i < 4; i ++) {
-    result = result + nums[i];
-  }
-  Serial.println(result);
+  Serial.begin(nums[0]);
+
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-
 }
